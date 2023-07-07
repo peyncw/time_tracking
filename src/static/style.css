@@ -1,0 +1,179 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Myriad Pro', Regular;
+}
+
+body {
+	/* background: #040507; */
+	background: rgb(20, 27, 40);
+	/* background: rgb(27, 18, 35); */
+	color: #e2e2e2;
+
+}
+
+
+.main {
+	display: block;
+	width: 200px;
+	height: 105px;
+	margin: 0 auto;
+	font-size: 14px;
+	padding: 0;
+}
+
+.top {
+	width: 200px;
+	float: left;
+}
+
+.loader {
+	display: block;
+	width: 200px;
+	height: 6px;
+	border-radius: 30px;
+	background: #136d22;
+	position: relative;
+}
+
+.loader-pause {
+	display: block;
+	width: 200px;
+	height: 6px;
+	border-radius: 30px;
+	background: #d56210;
+	position: relative;
+}
+
+.pin-on {
+	width: 30px;
+	margin-top: 10px;
+	text-align: center;
+	float: right;
+}
+
+.pin-off {
+	width: 30px;
+	margin-top: 10px;
+	text-align: center;
+	float: right;
+
+	& path {
+		/* fill: #136d22; */
+		fill: rgba(1, 202, 132, 255);
+	}
+}
+
+.pin-off:hover {
+	cursor: pointer;
+	transform: translateY(-2px);
+
+	& path {
+		fill: #cb3217;
+	}
+}
+
+.pin-on:hover {
+	cursor: pointer;
+	transform: translateY(2px);
+
+	& path {
+		/* fill: #136d22; */
+		fill: rgba(1, 202, 132, 255);
+	}
+}
+
+.container-time {
+	padding: 0;
+	width: 200px;
+	height: 42px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.container-time h1 {
+	margin-left: 5px;
+	padding: 0;
+	font-size: 2.5em;
+	width: 165px;
+	float: left;
+}
+
+
+.button-container {
+	width: 200px;
+	height: 56px;
+}
+
+
+.container {
+	position: relative;
+	margin-left: 10px;
+	float: left;
+}
+
+.btn h3 {
+	width: 100%;
+	margin-top: 8px;
+	text-align: center;
+}
+
+.btn {
+	position: relative;
+	width: 80px;
+	height: 40px;
+	border: white 3px solid;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: border 0.1s ease-in-out;
+
+	&:hover {
+		border: #858585 3px solid;
+		color: #858585;
+
+		.bar {
+			background-color: #858585;
+		}
+	}
+
+	.bar {
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		width: 3px;
+		height: 20px;
+		border-radius: 3px;
+		background-color: white;
+		transform-origin: center;
+		transition: transform 0.4s ease-in-out, background 0.1s ease-in-out;
+	}
+
+	&.pause {
+		.bar-1 {
+			transform: translateX(13.5px) translateY(0px) rotate(0deg);
+		}
+
+		.bar-2 {
+			transform: translateX(24px) translateY(0px) rotate(0deg);
+		}
+	}
+
+	&.play {
+		.bar-1 {
+			transform: translateX(20px) translateY(-5px) rotate(-55deg);
+		}
+
+		.bar-2 {
+			transform: translateX(20px) translateY(5px) rotate(-125deg);
+		}
+	}
+
+}
+
+#logs {
+	padding-top: 10px;
+	display: block;
+	width: 200px;
+	text-align: center;
+}
